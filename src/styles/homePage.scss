@@ -1,0 +1,219 @@
+@import "../Variables/Variables.scss";
+
+.containerParticles {
+     height: 70vh;
+
+     #tsparticles {
+          width: 100%;
+          height: 100%;
+     }
+}
+
+.homeDivContainer {
+     position: relative;
+     display: grid;
+     place-items: center;
+     padding: 0 !important;
+     top: -2em;
+     height: 20vh;
+     overflow: hidden;
+
+     :nth-child(1) {
+          @include calcDimension(50vw, 50vh);
+          position: absolute;
+     }
+     div:nth-child(2) {
+          @include calcDimension(40vw, 10vh);
+          position: absolute;
+          top: 5em;
+          background-color: #00d9ff8a;
+          box-shadow: 0 0 25px 1px #00d9ff96;
+          border-radius: 50%;
+
+          &::after {
+               @include calcDimension(50vw, 0px);
+               position: inherit;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               margin-top: 2px;
+               display: block;
+               content: "";
+               background-color: black;
+               border-radius: 50%;
+          }
+     }
+}
+
+.cardContainer {
+     margin-top: -4em;
+
+     .card {
+          @include borderStyling(1px, transparent);
+          color: $tertiaryColor;
+          background-color: #001d2e;
+          height: 25em;
+          overflow: hidden;
+
+          span {
+               color: $subColor;
+          }
+     }
+
+     .card-body {
+          position: relative;
+
+          &* {
+               z-index: 1;
+          }
+     }
+
+     .cardImg {
+          @include calcDimension(5rem, 5rem);
+          position: absolute;
+          top: 1em;
+          left: 3em;
+          color: #d5eeff38;
+          z-index: 0;
+     }
+}
+
+.carouselContainer {
+     position: relative;
+     margin-bottom: -6em;
+     z-index: 5;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     visibility: visible;
+
+     .alice-carousel {
+          width: 70vw;
+          margin: 0;
+     }
+     div {
+          display: grid;
+          place-items: center;
+
+          .items {
+               height: 100px;
+               width: 100px;
+               font-size: 3em;
+               color: $tertiaryColor;
+          }
+     }
+
+     @media (min-width: 992px) {
+          visibility: hidden;
+     }
+}
+
+.techContainer,
+.toolsContainer {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     margin-top: 3em;
+     padding: 2em;
+     flex-wrap: wrap;
+     font-size: x-large;
+
+     .toolsAndTech {
+          padding: 0 1em;
+          color: $tertiaryColor;
+
+          &:not(:last-child) {
+               border-right: 1px solid $secondaryColor;
+          }
+     }
+
+     &::after {
+          position: absolute;
+          content: "Technologies";
+          display: block;
+          color: $subColor;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          font-size: x-large;
+          font-weight: bold;
+     }
+}
+
+.toolsContainer {
+     &::after {
+          content: "Tools";
+     }
+}
+.projTitleContainer {
+     color: $tertiaryColor;
+     padding: 2em 20em;
+
+     h1 {
+          margin-top: 2em;
+          font-size: 3em;
+          color: $subColor;
+     }
+     @media (max-width: 768px) {
+          padding: 0 5em;
+     }
+}
+.projContainer {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 17em;
+     color: $tertiaryColor;
+     padding: 5em 0;
+
+     h1 {
+          color: $subColor;
+     }
+
+     .detailsContainer {
+          padding: 2em;
+
+          h4,
+          p,
+          a {
+               margin: 0;
+          }
+
+          p {
+               margin-top: 1.5em;
+          }
+     }
+
+     .imgContainer {
+          height: 100%;
+          display: flex;
+          align-items: center;
+     }
+     .projImg {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: fill;
+          filter: drop-shadow(0 0 0.8rem $secondaryColor);
+     }
+     .btnMoreProj {
+          @include projBtn;
+     }
+}
+.modal-dialog {
+     width: 80vw;
+
+     .modal-content {
+          background: transparent;
+          filter: drop-shadow(0 0 0.8rem $secondaryColor);
+
+          .btnMoreProjCloseModal {
+               @include projBtn;
+          }
+     }
+}
+
+.modalImg {
+     @include calcDimension(50vh, 0px);
+     filter: brightness(50%);
+}

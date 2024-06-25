@@ -1,0 +1,29 @@
+$primaryColor: #005689;
+$secondaryColor: #007cb9;
+$tertiaryColor: #d5eeff;
+$subColor: #ff895d;
+
+@mixin borderStyling($outlinePX, $color) {
+     box-shadow: none;
+     border: none;
+     border-radius: 5px;
+     outline: $outlinePX solid $color !important;
+}
+
+@mixin calcDimension($width, $height) {
+     width: calc(100% + $width);
+     height: calc(100% + $height);
+}
+
+@mixin projBtn() {
+     @include borderStyling(1px, $tertiaryColor);
+     background-color: $tertiaryColor !important;
+     color: $primaryColor !important;
+     margin-top: 1em;
+
+     &:hover {
+          @include borderStyling(1px, $secondaryColor);
+          background-color: $secondaryColor !important;
+          color: white !important;
+     }
+}

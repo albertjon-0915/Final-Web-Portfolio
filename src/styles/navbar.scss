@@ -1,0 +1,31 @@
+@import "../Variables/Variables.scss";
+
+.Navbar {
+     border-bottom: 1px solid;
+
+     a {
+          color: $tertiaryColor;
+     }
+
+     button {
+          color: $subColor;
+          @include borderStyling(0px, $primaryColor);
+     }
+
+     button:focus {
+          @include borderStyling(1px, $subColor);
+     }
+}
+
+.navbar-brand {
+     span {
+          color: $subColor;
+     }
+}
+
+.navbar-nav {
+     :nth-child(1) {
+          color: $secondaryColor;
+          font-weight: 600;
+     }
+}
