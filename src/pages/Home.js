@@ -6,6 +6,7 @@ import Cards from "../components/Cards";
 import Carousel from "../components/Carousel";
 import ToolsAndTechnology from "../components/ToolsAndTechnology";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 export default function Home() {
      return (
@@ -21,6 +22,7 @@ export default function Home() {
                <Cards />
                <ToolsAndTechnology />
                <Projects />
+               <Footer />
           </>
      );
 }

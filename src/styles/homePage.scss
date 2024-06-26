@@ -51,7 +51,7 @@
      .card {
           @include borderStyling(1px, transparent);
           color: $tertiaryColor;
-          background-color: #001d2e;
+          background-color: $bgColor;
           height: 25em;
           overflow: hidden;
 
@@ -180,6 +180,13 @@
                margin: 0;
           }
 
+          h4 {
+               font-size: xx-large;
+          }
+          a {
+               font-size: small;
+               color: $subColor;
+          }
           p {
                margin-top: 1.5em;
           }
@@ -211,9 +218,70 @@
                @include projBtn;
           }
      }
+
+     a {
+          font-size: small;
+          color: $subColor;
+     }
 }
 
 .modalImg {
      @include calcDimension(50vh, 0px);
      filter: brightness(50%);
+}
+
+footer {
+     background: $bgColor;
+     color: $tertiaryColor;
+     overflow: hidden;
+     font-size: clamp(0.5rem, 2.5vw, 1rem);
+
+     .footerContainer1 {
+          position: relative;
+          display: flex;
+          padding-top: 5em;
+
+          div {
+               display: flex;
+               justify-content: center;
+               flex: 1;
+
+               ul > li {
+                    margin: 1em;
+               }
+          }
+
+          .footerImg {
+               position: absolute;
+               margin-right: 2em;
+               @include calcDimension(10em, 10em);
+               font-size: 100%;
+               color: #d5eeff38;
+          }
+     }
+
+     .socials {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 10vh;
+
+          ul {
+               margin: 0;
+               li {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 1.5em;
+
+                    a {
+                         color: $tertiaryColor;
+                    }
+               }
+          }
+
+          span {
+               padding: 0 1em;
+               border-left: 1px solid $tertiaryColor;
+          }
+     }
 }
