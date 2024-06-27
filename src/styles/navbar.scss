@@ -6,7 +6,7 @@
      a {
           color: $tertiaryColor;
 
-          &:focus {
+          &:hover {
                color: $tertiaryColor;
           }
      }
@@ -31,5 +31,13 @@
      :nth-child(1) {
           color: $secondaryColor;
           font-weight: 600;
+     }
+
+     a {
+          transition: 0.4s ease-in-out;
+
+          &:hover {
+               color: $subColor;
+          }
      }
 }
