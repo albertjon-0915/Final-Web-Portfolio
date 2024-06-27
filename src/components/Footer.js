@@ -2,7 +2,7 @@ import React from "react";
 import { mockData } from "../mockData/mockData";
 import { BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
 import { FaConnectdevelop, FaComputer } from "react-icons/fa6";
-import "../styles/homePage.scss";
+import "../styles/footer.scss";
 
 export default function Footer() {
      return (

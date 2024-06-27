@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button, Col, Row, Carousel } from "react-bootstrap";
-import "../styles/homePage.scss";
+import "../styles/project.scss";
 
 export default function ModalProjects({ stack, projects }) {
      const [show, setShow] = useState(false);
@@ -89,7 +89,7 @@ export default function ModalProjects({ stack, projects }) {
                                    ? fullstack
                                    : null}
                          </Carousel>
-{/* 
+                         {/* 
                          <Button className="btnMoreProjCloseModal" onClick={handleClose}>
                               Close
                          </Button> */}

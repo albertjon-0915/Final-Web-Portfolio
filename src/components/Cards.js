@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
-import "../styles/homePage.scss";
+import "../styles/card.scss";
 
 import { FaReact, FaCss3Alt, FaJs } from "react-icons/fa";
 import logoHtml5 from "../images/toolsAndTech/logo-html5.png";

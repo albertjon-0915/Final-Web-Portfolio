@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/homePage.scss";
+import "../styles/project.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import { projects } from "../mockData/mockData";
 
@@ -25,9 +25,7 @@ export default function Projects() {
                               <div className="detailsContainer ">
                                    <h2>{projects.frontend[0].title}</h2>
                                    <p>{projects.frontend[0].subTitle}</p>
-                                   <a href={projects.frontend[0].link}>
-                                        {projects.frontend[0].link}
-                                   </a>
+                                   <a href={projects.frontend[0].link}>{projects.frontend[0].link}</a>
                                    <p>{projects.frontend[0].description}</p>
                                    <ModalProjects projects={projects} stack={"front"} />
                               </div>

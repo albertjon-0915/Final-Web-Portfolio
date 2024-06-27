@@ -5,6 +5,10 @@
 
      a {
           color: $tertiaryColor;
+
+          &:focus {
+               color: $tertiaryColor;
+          }
      }
 
      button {
