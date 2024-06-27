@@ -213,11 +213,11 @@
 .projTitleContainer {
      color: $tertiaryColor;
      padding: 2em 20em;
+     font-size: 1.2rem !important;
 
      h1 {
           margin-top: 2em;
           font-size: 3em;
-          color: $subColor;
      }
      @media (max-width: 768px) {
           padding: 0 5em;
@@ -230,6 +230,7 @@
      gap: 17em;
      color: $tertiaryColor;
      padding: 5em 0;
+     font-size: 1.5rem;
 
      h1 {
           color: $subColor;
@@ -245,11 +246,12 @@
           }
 
           h4 {
+               color: $secondaryColor;
                font-size: xx-large;
           }
           a {
                font-size: small;
-               color: $subColor;
+               color: $primaryColor;
           }
           p {
                margin-top: 1.5em;
