@@ -23,9 +23,9 @@ export default function Projects() {
                     <Row>
                          <Col lg={6} md={12}>
                               <div className="detailsContainer ">
-                                   <h4>{projects.frontend[0].title}</h4>
+                                   <h2>{projects.frontend[0].title}</h2>
                                    <p>{projects.frontend[0].subTitle}</p>
-                                   <a href={projects.frontend[0].link} className="text-decoration-none fst-italic">
+                                   <a href={projects.frontend[0].link}>
                                         {projects.frontend[0].link}
                                    </a>
                                    <p>{projects.frontend[0].description}</p>
@@ -46,11 +46,9 @@ export default function Projects() {
                          </Col>
                          <Col lg={6} md={12}>
                               <div className="detailsContainer ">
-                                   <h4>{projects.backend[0].title}</h4>
+                                   <h2>{projects.backend[0].title}</h2>
                                    <p>{projects.backend[0].subTitle}</p>
-                                   <a href={projects.backend[0].link} className="text-decoration-none fst-italic">
-                                        {projects.backend[0].link}
-                                   </a>
+                                   <a href={projects.backend[0].link}>{projects.backend[0].link}</a>
                                    <p>{projects.backend[0].description}</p>
                                    <ModalProjects projects={projects} stack={"back"} />
                               </div>
@@ -59,11 +57,9 @@ export default function Projects() {
                     <Row>
                          <Col lg={6} md={12}>
                               <div className="detailsContainer">
-                                   <h4>{projects.fullstack[0].title}</h4>
+                                   <h2>{projects.fullstack[0].title}</h2>
                                    <p>{projects.fullstack[0].subTitle}</p>
-                                   <a href={projects.fullstack[0].link} className="text-decoration-none fst-italic">
-                                        {projects.fullstack[0].link}
-                                   </a>
+                                   <a href={projects.fullstack[0].link}>{projects.fullstack[0].link}</a>
                                    <p>{projects.fullstack[0].description}</p>
                                    <ModalProjects projects={projects} stack={"fullstack"} />
                               </div>

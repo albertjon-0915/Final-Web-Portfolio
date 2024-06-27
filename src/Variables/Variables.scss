@@ -21,6 +21,7 @@ $bgColor: #001d2e;
      background-color: $tertiaryColor !important;
      color: $primaryColor !important;
      margin-top: 1em;
+     transition: 0.5s ease-in-out;
 
      &:hover {
           @include borderStyling(1px, $secondaryColor);

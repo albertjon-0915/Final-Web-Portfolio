@@ -1,6 +1,8 @@
 @import "../Variables/Variables.scss";
 
 .containerParticles {
+     display: flex;
+     justify-content: center;
      position: relative;
      height: 70vh;
      overflow: hidden;
@@ -37,7 +39,7 @@
                     position: relative;
                     object-fit: cover;
                     width: calc(100%);
-                    filter: drop-shadow(0px 0px 20px $secondaryColor);
+                    filter: drop-shadow(0px 0px 20px $secondaryColor) grayscale(30%);
                }
 
                &::after {
@@ -59,8 +61,15 @@
           .heroContentContainer {
                color: $tertiaryColor;
 
+               h1{
+                    font-size: 3em;
+               }
+
                button {
-                    max-width: 5em;
+                    @include projBtn;
+                    display: inline-block;
+                    background-color: transparent !important;
+                    color: $tertiaryColor !important;
                }
 
                @media (max-width: 768px) {
@@ -71,6 +80,7 @@
                }
           }
      }
+
 }
 
 .homeDivContainer {
@@ -113,10 +123,11 @@
      margin-top: -4em;
 
      .card {
+          display: inline-block;
           @include borderStyling(1px, transparent);
           color: $tertiaryColor;
           background-color: $bgColor;
-          height: 25em;
+          // height: 25em;
           overflow: hidden;
 
           span {
@@ -129,6 +140,17 @@
 
           &* {
                z-index: 1;
+          }
+
+          div {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: center;
+               justify-content: center;
+               padding: 1em 0;
+               img {
+                    width: 100px;
+               }
           }
      }
 
@@ -212,14 +234,14 @@
 }
 .projTitleContainer {
      color: $tertiaryColor;
-     padding: 2em 20em;
+     padding: 0em 20em;
      font-size: 1.2rem !important;
 
      h1 {
           margin-top: 2em;
           font-size: 3em;
      }
-     @media (max-width: 768px) {
+     @media (max-width: 992px) {
           padding: 0 5em;
      }
 }
@@ -229,7 +251,7 @@
      justify-content: center;
      gap: 17em;
      color: $tertiaryColor;
-     padding: 5em 0;
+     padding: 3em 0;
      font-size: 1.5rem;
 
      h1 {
@@ -239,19 +261,25 @@
      .detailsContainer {
           padding: 2em;
 
-          h4,
+          h2,
           p,
           a {
                margin: 0;
           }
 
-          h4 {
-               color: $secondaryColor;
-               font-size: xx-large;
+          h2 {
+               font-size: 2em;
           }
           a {
+               text-decoration-line: underline;
+               text-decoration-color: $primaryColor;
                font-size: small;
                color: $primaryColor;
+
+               &:hover {
+                    color: $secondaryColor;
+                    text-decoration-color: $secondaryColor;
+               }
           }
           p {
                margin-top: 1.5em;

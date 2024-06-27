@@ -20,7 +20,7 @@ export default function Home() {
                          <Col md={6} sm={12} className="heroContentContainer  p-sm-2">
                               <h1 className="text-center text-md-start">Hi, I'm Albert Inciong</h1>
                               <h3 className="text-center text-md-start">a future web developer</h3>
-                              <button>Explore</button>
+                              <button className="px-5 py-2">Explore</button>
                          </Col>
                     </Row>
                     <Particles />
