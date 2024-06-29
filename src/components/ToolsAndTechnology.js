@@ -10,9 +10,9 @@ export default function ToolsAndTechnology() {
                .then((data) => {
                     if (data.message === "found items") {
                          setToolsAndTech(data.result[0].toolsAndTech);
-                         console.log(tech);
-                         console.log(tech.tools);
-                         console.log(tech.tech);
+                         // console.log(tech);
+                         // // console.log(tech.tools);
+                         // // console.log(tech.tech);
                     }
                })
                .catch((error) => console.error("Error fetching data:", error));
@@ -20,7 +20,7 @@ export default function ToolsAndTechnology() {
 
      useEffect(() => {
           fetchData();
-     }, [tech]);
+     }, []);
 
      return (
           <>
