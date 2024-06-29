@@ -12,7 +12,7 @@ import myImg from "../images/me-ako.png";
 export default function Home() {
      return (
           <>
-               <div as={Container} fluid className="containerParticles">
+               <div as={Container} fluid="true" className="containerParticles">
                     <Row className="heroPageContainer p-sm-0">
                          <Col md={6} sm={12} className="imgContainer p-sm-0">
                               <img src={myImg} alt="logo" className="myImg" />
