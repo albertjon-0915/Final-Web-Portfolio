@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import "../styles/navbar.scss";
 import { BsList, BsX } from "react-icons/bs";
@@ -8,6 +8,18 @@ export default function AppNavBar() {
      const toggleExpand = () => {
           setIsExpanded(!isExpanded);
      };
+
+     window.addEventListener("scroll", () => {
+          const navbar = document.querySelector(".Navbar");
+          let top = window.scrollY;
+
+          if (top > 200) {
+               navbar.classList.add("showNav");
+          } else {
+               navbar.classList.remove("showNav");
+          }
+     });
+
      return (
           <Navbar expand="md" className="Navbar p-3" collapseOnSelect>
                <Container fluid>

@@ -1,15 +1,16 @@
 @import "../Variables/Variables.scss";
 
-:root {
-     --bs-navbar-active-color: unset !important;
-}
-
 .Navbar {
+     position: sticky !important;
+     top: 0 !important;
+     z-index: 10 !important;
      border-bottom: 1px solid rgba(66, 66, 66, 0.493);
+     transition: background-color 0.5s ease-in-out;
      color: $tertiaryColor;
 
-     a {
+     .nav-link {
           color: $tertiaryColor;
+          --bs-navbar-active-color: $tertiaryColor;
      }
 
      button {
@@ -47,4 +48,8 @@
                color: $subColor !important;
           }
      }
+}
+
+.showNav {
+     background-color: $bgColor;
 }

@@ -84,10 +84,10 @@
 
      a {
           font-size: small;
-          color: $tertiaryColor;
+          color: $subColor;
 
           &:hover {
-               color: $subColor;
+               color: $secondaryColor;
           }
      }
 }
