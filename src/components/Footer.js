@@ -53,30 +53,33 @@ export default function Footer() {
                     <div className="socials">
                          <ul className="list-unstyled d-flex">
                               <li>
-                                   <a href="#" target="_blank">
+                                   <a
+                                        href="https://www.facebook.com/alaric.0915"
+                                        target="_blank"
+                                   >
                                         <BsFacebook />
                                    </a>
                               </li>
                               <li>
-                                   <a href="#" target="_blank">
+                                   <a
+                                        href="https://www.linkedin.com/in/albert-jon-7a8957288/"
+                                        target="_blank"
+                                   >
                                         <BsLinkedin />
                                    </a>
                               </li>
                               <li>
-                                   <a href="#" target="_blank">
+                                   <a
+                                        href="https://github.com/albertjon-0915"
+                                        target="_blank"
+                                   >
                                         <BsGithub />
                                    </a>
                               </li>
                          </ul>
-                         <span href="#" target="_blank">
-                              Albert Inciong
-                         </span>
-                         <span href="#" target="_blank">
-                              2024&copy;
-                         </span>
-                         <span href="#" target="_blank">
-                              All Rights Reserved
-                         </span>
+                         <span href="#">Albert Inciong</span>
+                         <span>2024&copy;</span>
+                         <span>All Rights Reserved</span>
                     </div>
                </footer>
           </>

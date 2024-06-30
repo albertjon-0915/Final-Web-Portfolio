@@ -35,7 +35,7 @@ export default function Projects() {
                          these projects are deployed and hosted online.
                     </p>
                </div>
-               <Container className="projContainer">
+               <Container className="projContainer" id="proj">
                     {/* Example for frontend */}
                     {dataset.frontend && dataset.frontend.length > 0 && (
                          <Row>
@@ -43,7 +43,9 @@ export default function Projects() {
                                    <div className="detailsContainer">
                                         <h2>{dataset.frontend[0].title}</h2>
                                         <p>{dataset.frontend[0].subtitle}</p>
-                                        <a href={dataset.frontend[0].link}>{dataset.frontend[0].link}</a>
+                                        <a href={dataset.frontend[0].link} target="_blank">
+                                             {dataset.frontend[0].link}
+                                        </a>
                                         <p>{dataset.frontend[0].description}</p>
                                         <ModalProjects projects={dataset.frontend} />
                                    </div>
@@ -60,17 +62,19 @@ export default function Projects() {
                     {dataset.backend && dataset.backend.length > 0 && (
                          <Row>
                               <Col lg={6} md={12}>
+                                   <div className="imgContainer">
+                                        <img src={dataset.backend[0].imageString} alt="" className="projImg" />
+                                   </div>
+                              </Col>
+                              <Col lg={6} md={12}>
                                    <div className="detailsContainer">
                                         <h2>{dataset.backend[0].title}</h2>
                                         <p>{dataset.backend[0].subtitle}</p>
-                                        <a href={dataset.backend[0].link}>{dataset.backend[0].link}</a>
+                                        <a href={dataset.backend[0].link} target="_blank">
+                                             {dataset.backend[0].link}
+                                        </a>
                                         <p>{dataset.backend[0].description}</p>
                                         <ModalProjects projects={dataset.backend} />
-                                   </div>
-                              </Col>
-                              <Col lg={6} md={12} className="order-first order-lg-last">
-                                   <div className="imgContainer">
-                                        <img src={dataset.backend[0].imageString} alt="" className="projImg" />
                                    </div>
                               </Col>
                          </Row>
@@ -83,7 +87,9 @@ export default function Projects() {
                                    <div className="detailsContainer">
                                         <h2>{dataset.fullstack[0].title}</h2>
                                         <p>{dataset.fullstack[0].subtitle}</p>
-                                        <a href={dataset.fullstack[0].link}>{dataset.fullstack[0].link}</a>
+                                        <a href={dataset.fullstack[0].link} target="_blank">
+                                             {dataset.fullstack[0].link}
+                                        </a>
                                         <p>{dataset.fullstack[0].description}</p>
                                         <ModalProjects projects={dataset.fullstack} />
                                    </div>

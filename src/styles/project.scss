@@ -17,7 +17,7 @@
      display: flex;
      flex-direction: column;
      justify-content: center;
-     gap: 17em;
+     gap: 10em;
      color: $tertiaryColor;
      padding: 3em 0;
      font-size: 1.5rem;
@@ -84,11 +84,26 @@
 
      a {
           font-size: small;
-          color: $subColor;
+          color: $tertiaryColor;
+
+          &:hover {
+               color: $subColor;
+          }
      }
 }
 
 .modalImg {
-     @include calcDimension(50vh, 0px);
+     aspect-ratio: 1/1.1;
+     object-fit: cover;
+     max-width: 800px;
      filter: brightness(50%);
+}
+
+.detailsContainerModal {
+     backdrop-filter: blur(25px) saturate(74%);
+     -webkit-backdrop-filter: blur(25px) saturate(74%);
+     background-color: rgba(78, 78, 78, 0.123);
+     border-radius: 12px;
+     padding: 1em;
+     box-shadow: 0 0 25px 1px rgba(54, 54, 54, 0.589);
 }

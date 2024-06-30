@@ -19,16 +19,13 @@ export default function AppNavBar() {
                     </Navbar.Toggle>
                     <Navbar.Collapse id="navbarScroll">
                          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-                              <Nav.Link href="#action1" onClick={toggleExpand}>
+                              <Nav.Link href="#" onClick={toggleExpand}>
                                    Home
                               </Nav.Link>
-                              <Nav.Link href="#action2" onClick={toggleExpand}>
-                                   About
-                              </Nav.Link>
-                              <Nav.Link href="#action2" onClick={toggleExpand}>
+                              <Nav.Link href="#cards" onClick={toggleExpand}>
                                    Skills
                               </Nav.Link>
-                              <Nav.Link href="#action2" onClick={toggleExpand}>
+                              <Nav.Link href="#proj" onClick={toggleExpand}>
                                    Projects
                               </Nav.Link>
                          </Nav>

@@ -16,10 +16,10 @@ export default function ModalProjects({ projects }) {
                     <Carousel.Caption>
                          <Row>
                               <Col>
-                                   <div className="detailsContainer">
+                                   <div className="detailsContainerModal">
                                         <h4>{item.title}</h4>
                                         <p>{item.subtitle}</p>
-                                        <a href={item.link} className="text-decoration-none fst-italic">
+                                        <a href={item.link} className="text-decoration-none fst-italic" target="_blank">
                                              {item.link}
                                         </a>
                                         <p>{item.description}</p>
