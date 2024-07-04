@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 import "../styles/homePage.scss";
 
 export default function ToolsAndTechnology() {
@@ -25,22 +26,32 @@ export default function ToolsAndTechnology() {
      return (
           <>
                <div className="techContainer">
-                    {Array.isArray(tech.tech) &&
-                         tech.tech.length > 0 &&
+                    {Array.isArray(tech.tech) && tech.tech.length > 0 ? (
                          tech.tech.map((item) => (
                               <div key={item} className="toolsAndTech" id={item}>
                                    {item}
                               </div>
-                         ))}
+                         ))
+                    ) : (
+                         // spinners
+                         <div className="position-relative container fluid d-flex justify-content-center" id="loader">
+                              <Spinner animation="border" size="md" />
+                         </div>
+                    )}
                </div>
                <div className="toolsContainer">
-                    {Array.isArray(tech.tools) &&
-                         tech.tech.length > 0 &&
+                    {Array.isArray(tech.tools) && tech.tech.length > 0 ? (
                          tech.tools.map((item) => (
                               <div key={item} className="toolsAndTech" id={item}>
                                    {item}
                               </div>
-                         ))}
+                         ))
+                    ) : (
+                         // spinners
+                         <div className="position-relative container fluid d-flex justify-content-center" id="loader">
+                              <Spinner animation="border" size="md" />
+                         </div>
+                    )}
                </div>
           </>
      );
