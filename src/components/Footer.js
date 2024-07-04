@@ -1,29 +1,24 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
 import { FaConnectdevelop } from "react-icons/fa6";
 import "../styles/footer.scss";
 
 export default function Footer() {
-     const [tech, setToolsAndTech] = useState({});
-
-     const fetchData = () => {
-          fetch(`${process.env.REACT_APP_API_URL}/projects/tech`)
-               .then((res) => res.json())
-               .then((data) => {
-                    if (data.message === "found items") {
-                         setToolsAndTech(data.result[0].toolsAndTech);
-                         // console.log(tech);
-                         // // console.log(tech.tools);
-                         // // console.log(tech.tech);
-                    }
-               })
-               .catch((error) => console.error("Error fetching data:", error));
+     const tech = {
+          tech: [
+               "HTML",
+               "CSS",
+               "SASS",
+               "Bootstrap",
+               "JavaScript",
+               "NodeJS",
+               "ExpressJS",
+               "Mongoose",
+               "ReactJS",
+               "MongoDB",
+          ],
+          tools: ["Git", "Postman", "Sublime", "VScode", "Github", "ChromeDevTools"],
      };
-
-     useEffect(() => {
-          fetchData();
-     }, []);
 
      return (
           <>
@@ -53,26 +48,17 @@ export default function Footer() {
                     <div className="socials">
                          <ul className="list-unstyled d-flex">
                               <li>
-                                   <a
-                                        href="https://www.facebook.com/alaric.0915"
-                                        target="_blank"
-                                   >
+                                   <a href="https://www.facebook.com/alaric.0915" target="_blank">
                                         <BsFacebook />
                                    </a>
                               </li>
                               <li>
-                                   <a
-                                        href="https://www.linkedin.com/in/albert-jon-7a8957288/"
-                                        target="_blank"
-                                   >
+                                   <a href="https://www.linkedin.com/in/albert-jon-7a8957288/" target="_blank">
                                         <BsLinkedin />
                                    </a>
                               </li>
                               <li>
-                                   <a
-                                        href="https://github.com/albertjon-0915"
-                                        target="_blank"
-                                   >
+                                   <a href="https://github.com/albertjon-0915" target="_blank">
                                         <BsGithub />
                                    </a>
                               </li>

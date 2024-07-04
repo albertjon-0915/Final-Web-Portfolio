@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../styles/project.scss";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import ModalProjects from "./modalProjects";
 
 export default function Projects() {
      const [dataset, setDataset] = useState({});
+     const [loader, setLoader] = useState();
 
      const fetchData = () => {
           fetch(`${process.env.REACT_APP_API_URL}/projects`)
@@ -37,7 +38,7 @@ export default function Projects() {
                </div>
                <Container className="projContainer" id="proj">
                     {/* Example for frontend */}
-                    {dataset.frontend && dataset.frontend.length > 0 && (
+                    {dataset.frontend && dataset.frontend.length > 0 ? (
                          <Row>
                               <Col lg={6} md={12}>
                                    <div className="detailsContainer">
@@ -56,10 +57,15 @@ export default function Projects() {
                                    </div>
                               </Col>
                          </Row>
+                    ) : (
+                         // spinners
+                         <div className="position-relative container fluid d-flex justify-content-center" id="loader">
+                              <Spinner animation="border" size="md" />
+                         </div>
                     )}
 
                     {/* Example for backend */}
-                    {dataset.backend && dataset.backend.length > 0 && (
+                    {dataset.backend && dataset.backend.length > 0 ? (
                          <Row>
                               <Col lg={6} md={12}>
                                    <div className="imgContainer">
@@ -78,10 +84,15 @@ export default function Projects() {
                                    </div>
                               </Col>
                          </Row>
+                    ) : (
+                         // spinners
+                         <div className="position-relative container fluid d-flex justify-content-center" id="loader">
+                              <Spinner animation="border" size="md" />
+                         </div>
                     )}
 
                     {/* Example for fullstack */}
-                    {dataset.fullstack && dataset.fullstack.length > 0 && (
+                    {dataset.fullstack && dataset.fullstack.length > 0 ? (
                          <Row>
                               <Col lg={6} md={12}>
                                    <div className="detailsContainer">
@@ -100,6 +111,11 @@ export default function Projects() {
                                    </div>
                               </Col>
                          </Row>
+                    ) : (
+                         // spinners
+                         <div className="position-relative container fluid d-flex justify-content-center" id="loader">
+                              <Spinner animation="border" size="md" />
+                         </div>
                     )}
                </Container>
           </>
