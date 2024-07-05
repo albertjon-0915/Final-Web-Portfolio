@@ -8,8 +8,6 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Hero from "../components/herosection/Hero";
 
-
-
 export default function Home() {
      return (
           <>

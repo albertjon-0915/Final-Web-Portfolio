@@ -5,6 +5,7 @@ import { BsList, BsX } from "react-icons/bs";
 
 export default function AppNavBar() {
      const [isExpanded, setIsExpanded] = useState(false);
+     
      const toggleExpand = () => {
           setIsExpanded(!isExpanded);
      };
@@ -23,7 +24,7 @@ export default function AppNavBar() {
      return (
           <Navbar expand="md" className="Navbar p-3" collapseOnSelect>
                <Container fluid>
-                    <Navbar.Brand href="#">
+                    <Navbar.Brand href="#containerParticles">
                          Web<span>Porfolio</span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" onClick={toggleExpand}>
@@ -31,7 +32,7 @@ export default function AppNavBar() {
                     </Navbar.Toggle>
                     <Navbar.Collapse id="navbarScroll">
                          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-                              <Nav.Link href="#" onClick={toggleExpand}>
+                              <Nav.Link href="#containerParticles" onClick={toggleExpand}>
                                    Home
                               </Nav.Link>
                               <Nav.Link href="#cards" onClick={toggleExpand}>
